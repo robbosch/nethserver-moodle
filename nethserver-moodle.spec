@@ -1,6 +1,6 @@
 Name: nethserver-moodle
 Summary: Moodle integration in NethServer
-Version: 0.0.9
+Version: 0.0.10
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -36,11 +36,16 @@ rm -rf %{buildroot}
 
 %files -f %{name}-%{version}-filelist
 %defattr(-,root,root)
-%doc COPYING README.rst
+%doc COPYING README.rst tablecreationMoodle-3.1.3.sql
 %dir %{_nseventsdir}/%{name}-update
 
 
 %changelog
+* Thu Feb 9 2017 stephane de Labrusse <stephdl@de-labrusse.fr>   - 0.0.10-1
+- Autentication of users following the SSSD state (ldap or AD)
+- admin gets its password set by default : 'password'
+- Members of the group 'staff' are granted as course creator
+
 * Wed Dec 7 2016 Alain Reguera Delgado <alain.reguera@gmail.com> - 0.0.9-1
 - Add support to both alias and virtualhost configuration
 - Update README.srt file to describe recent changes
