@@ -18,7 +18,7 @@ close(FH);
 
 # import the phpmyadmin sql structure
 my $dbstruct = `rpm -qd nethserver-moodle | grep 10tablecreation`;
-system ("/usr/bin/mysql phpmyadmin < $dbstruct");
+system ("/usr/bin/mysql moodle < $dbstruct");
 system ('/sbin/e-smith/expand-template /etc/e-smith/sql/init/20MoodleLdaptablecreation.sql');
 system ('/usr/bin/systemctl restart mysql.init');
 system ('/usr/bin/php /var/www/moodle/web/admin/cli/purge_caches.php');
