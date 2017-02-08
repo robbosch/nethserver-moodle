@@ -9371,16 +9371,6 @@ CREATE TABLE `mdl_sessions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `mdl_sessions`
---
-
-LOCK TABLES `mdl_sessions` WRITE;
-/*!40000 ALTER TABLE `mdl_sessions` DISABLE KEYS */;
-INSERT INTO `mdl_sessions` VALUES (1,0,'pmejk9bqjq5afb1qqco4b26bm5',0,NULL,1486399546,1486399546,'192.168.12.25','192.168.12.25');
-/*!40000 ALTER TABLE `mdl_sessions` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `mdl_stats_daily`
 --
 
@@ -10328,16 +10318,6 @@ CREATE TABLE `mdl_user` (
   KEY `mdl_user_alt_ix` (`alternatename`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='One record for each person';
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `mdl_user`
---
-
-LOCK TABLES `mdl_user` WRITE;
-/*!40000 ALTER TABLE `mdl_user` DISABLE KEYS */;
-INSERT INTO `mdl_user` VALUES (1,'manual',1,0,0,0,1,'guest','$2y$10$m.8fEOHNvLYI.jyiF8zdMuASkQYxLAD5G4XPhsLmTBMKb/4L2.pKq','','Guest user',' ','root@localhost',0,'','','','','','','','','','','','','en','gregorian','','99',0,0,0,0,'','',0,'','This user is a special user that allows read-only access to some courses.',1,1,0,2,1,0,0,1486399398,0,NULL,NULL,NULL,NULL,NULL),(2,'manual',1,0,0,0,1,'admin','adminsetuppending','','Admin','User','',0,'','','','','','','','','','','','','en','gregorian','','99',0,0,0,0,'192.168.12.25','',0,'',NULL,1,1,0,1,1,0,0,1486399399,0,NULL,NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `mdl_user` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `mdl_user_devices`
