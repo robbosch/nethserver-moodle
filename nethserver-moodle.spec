@@ -36,7 +36,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}-%{version}-filelist
 %defattr(-,root,root)
-%doc COPYING README.rst 10tablecreationMoodle3.1.3.sql
+%doc COPYING README.rst tablecreationMoodle-3.1.3.sql
 %dir %{_nseventsdir}/%{name}-update
 
 
