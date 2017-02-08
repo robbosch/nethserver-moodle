@@ -63,7 +63,7 @@ REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_map_firstname'
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_updatelocal_firstname','oncreate');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_updateremote_firstname','0');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_lock_firstname','unlocked');
-REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_map_lastname','sn');
+REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_map_lastname','samaccountname');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_updatelocal_lastname','oncreate');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_updateremote_lastname','0');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_lock_lastname','unlocked');
@@ -185,7 +185,7 @@ REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_map_firstname'
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_updatelocal_firstname','oncreate');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_updateremote_firstname','0');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_lock_firstname','unlocked');
-REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_map_lastname','cn');
+REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_map_lastname','uid');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_updatelocal_lastname','oncreate');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_updateremote_lastname','0');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','field_lock_lastname','unlocked');
