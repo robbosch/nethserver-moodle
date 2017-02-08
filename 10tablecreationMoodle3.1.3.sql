@@ -10335,7 +10335,7 @@ CREATE TABLE `mdl_user` (
 
 LOCK TABLES `mdl_user` WRITE;
 /*!40000 ALTER TABLE `mdl_user` DISABLE KEYS */;
-INSERT INTO `mdl_user` VALUES (1,'manual',1,0,0,0,1,'guest','$2y$10$m.8fEOHNvLYI.jyiF8zdMuASkQYxLAD5G4XPhsLmTBMKb/4L2.pKq','','Guest user',' ','root@localhost',0,'','','','','','','','','','','','','en','gregorian','','99',0,0,0,0,'','',0,'','This user is a special user that allows read-only access to some courses.',1,1,0,2,1,0,0,1486399398,0,NULL,NULL,NULL,NULL,NULL),(2,'manual',1,0,0,0,1,'admin','adminsetuppending','','Admin','User','',0,'','','','','','','','','','','','','en','gregorian','','99',0,0,0,0,'NULL','',0,'',NULL,1,1,0,1,1,0,0,1486399399,0,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `mdl_user` VALUES (1,'manual',1,0,0,0,1,'guest','$2y$10$m.8fEOHNvLYI.jyiF8zdMuASkQYxLAD5G4XPhsLmTBMKb/4L2.pKq','','Guest user',' ','root@localhost',0,'','','','','','','','','','','','','en','gregorian','','99',0,0,0,0,'','',0,'','This user is a special user that allows read-only access to some courses.',1,1,0,2,1,0,0,1486399398,0,NULL,NULL,NULL,NULL,NULL),(2,'manual',1,0,0,0,1,'admin','adminsetuppending','','Admin','User','',0,'','','','','','','','','','','','','en','gregorian','','99',0,0,0,0,'192.168.12.25','',0,'',NULL,1,1,0,1,1,0,0,1486399399,0,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `mdl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
