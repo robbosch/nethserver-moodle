@@ -1,13 +1,26 @@
-#!/bin/bash
-######################################################################
-#
-#   NethServer configuration for Moodle database
-#
-######################################################################
+#!/usr/bin/perl
 
-password=`perl -e "use NethServer::Password; print NethServer::Password::store('moodle');"`
+use strict;
+use NethServer::Password;
 
-# initialize grants mysql moodle database
-/usr/bin/mysql --defaults-file=/root/.my.cnf -e "CREATE DATABASE IF NOT EXISTS moodle;"
-/usr/bin/mysql --defaults-file=/root/.my.cnf -e "grant all on moodle.* to 'moodle'@'localhost' identified by '$password';"
-/usr/bin/mysql --defaults-file=/root/.my.cnf -e "FLUSH PRIVILEGES"
+my $password = NethServer::Password::store('moodle') || die('Could not get moodle password!');
+
+if ( ! -e '/var/lib/mysql/moodle') {
+my $commands = join("\n",
+              "GRANT ALL PRIVILEGES ON `moodle`.* TO 'moodle'\@'localhost' IDENTIFIED BY '$password';",
+              "FLUSH PRIVILEGES;",
+              "CREATE DATABASE IF NOT EXISTS moodle DEFAULT CHARACTER SET = 'utf8';"
+     ) . "\n";
+
+open(FH, '|-', '/usr/bin/mysql -B -f') || die("[ERROR] Could not connect to mysql");
+print FH $commands;
+close(FH);
+
+# import the phpmyadmin sql structure
+my $dbstruct = `rpm -qd nethserver-moodle | grep 10tablecreation`;
+system ("/usr/bin/mysql phpmyadmin < $dbstruct");
+system ('/sbin/e-smith/expand-template /etc/e-smith/sql/init/20MoodleLdaptablecreation.sql');
+system ('/usr/bin/systemctl restart mysql.init');
+system ('/usr/bin/php /var/www/moodle/web/admin/cli/purge_caches.php');
+}
+
