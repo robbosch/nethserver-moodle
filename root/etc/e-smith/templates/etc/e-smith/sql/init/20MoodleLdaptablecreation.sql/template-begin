@@ -41,7 +41,7 @@ REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','ldap_version','3');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','objectclass','user');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','memberattribute','');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','memberattribute_isdn','');
-REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','creators','cn=staff,ou=Users,dc=stephdl,dc=dyndns,dc=org');
+REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','creators','cn=staff,cn=Users,$baseDN');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','create_context','');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','expiration','0');
 REPLACE INTO `mdl_config_plugins` VALUES (NULL,'auth/ldap','expiration_warning','10');
